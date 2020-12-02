@@ -1,0 +1,29 @@
+Oi para começar apenas execute o arquivo "projeto.py"
+
+Aqui vai estar listado todas as pergutas possiveis para executar:
+- Eu deveria trocar de roupa?
+- Qual genero de musica deveria ouvir?
+- Eu deveria ir jogar VideoGame?
+- Quando vai acabar as aulas do curso tecnico?
+- Será que vai chover hoje?
+- Eu deveria assistir Bakemonogatari? 
+- Quando é o dia dos finados?
+- Quantos livros tem a bíblia?
+- Quanto está o dólar hoje?
+- Quando foi proclamada a independencia do Brasil?
+- Quantos paises existem no mundo?
+- Será que a terra é plana?
+- Qual o tempo para cozinhar um ovo?
+- Quais são as cores do arco íris?
+- Me conta uma piada?
+- Me recomenda uma musica?
+- Quem é o presidente do Brasil?
+
+Alem dessas exitem duas perguntas com multiplas resposta:
+    1 - Eu deveria comer fora hoje?
+    Interação do programa: "Depende, como está o clima?"
+    Respostas possiveis: ensolarado, chuvoso ou umido
+
+    2 - Qual meu horoscopo de hoje?
+    Interação do programa: "Depende, qual seu signo?"
+    Respostas possiveis: áries, touro, gêmeos, câncer, leão, virgem, libra, escorpião, sagitário, capricórnio, aquário, peixes.
