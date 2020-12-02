@@ -52,53 +52,66 @@ Perguntas de ordem começam com "Me" (Exemplo: "Me conte uma piada?")
 
     def signo(self):
         a = self.a.get()
+        global verificacao
         global bhop
         if a.lower() == "aries" or a.lower() == "áries":
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Agradeça aos antepassados pela sabedoria recebida que será valorosa nestes tempos de mudanças e de provações."
             bhop = 1
         if a.lower() == "touro":
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Mesmo no feriado, negociações de trabalho estarão em andamento. A semana sinaliza mudanças nas parcerias e novas conexões."
             bhop = 1
         if a.lower() == "gêmeos" or a.lower() == "gemeos":
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Mercúrio, seu planeta regente, andando para a frente, movimentará a semana com ideias criativas e soluções originais."
             bhop = 1
         if a.lower() == "câncer" or a.lower() == "cancer":
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Encontre um ponto de equilíbrio entre o que você deseja e o que será possível realizar neste período de restrições."
             bhop = 1
         if a.lower() == "leão" or a.lower() == "leao":
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Semana importante na carreira. Ganhe popularidade e projeção. Mercúrio andando para a frente facilitará divulgações e comunicações de trabalho."
             bhop=1
         if a.lower() == "virgem":
             self.oldmensagem["text"] = ""
+            verificacao = 1
             self.mensagem["text"] = "Negociações financeiras terão andamento positivo nesta semana, com Mercúrio já em movimento direto."
             bhop=1
         if a.lower() == "libra":
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Determine objetivos, planeje uma viagem com antecedência e inicie relações num novo padrão."
             bhop=1
         if a.lower() == "escorpião" or a.lower() == "escorpiao":
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Novidades chegarão por todos os lados, nesta semana. Pense positivo e impulsione novo projeto de trabalho."
             bhop=1
         if a.lower() == "sagitário" or a.lower() == "sagitario":
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Entendimento com parceiros, equipe e amizades movimentarão negócios, nesta semana."
             bhop=1
         if a.lower() == "capricórnio" or a.lower() == "capricornio":
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Aprove um projeto, amplie comunicações profissionais e aposte em metas mais altas. Mercúrio em movimento direto impactará diretamente na carreira."
             bhop=1
         if a.lower() == "aquário" or a.lower() == "aquario":
             bhop = 1
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "A semana será decisiva no amor. Renove os sentimentos e aumente a confiança nos projetos da vida íntima. Mercúrio em movimento direto trará mais otimismo."
         if a.lower() == "peixes":
             bhop = 1
+            verificacao = 1
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Decisões financeiras envolverão a família e o amor. A semana favorecerá o casamento e associações."
         else:
@@ -122,6 +135,7 @@ Perguntas de ordem começam com "Me" (Exemplo: "Me conte uma piada?")
         "O arco-íris aparece em sete cores: Violeta, anil, azul, verde, amarelo, laranja e vermelho.","Por que o penguim atirou o relogio pela janela? Porque ele queria ver o tempo voar."
         ,"Alvin e os Esquilos Caneta Azul","Jair Messias BOLSONAROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"]
         a = self.a.get()
+        verificacao = 0
         if  a.lower() == "ensolarado":
             self.oldmensagem["text"] = ""
             self.mensagem["text"] = "Então não saia!"
@@ -148,6 +162,7 @@ Perguntas de ordem começam com "Me" (Exemplo: "Me conte uma piada?")
                             while a.lower()==x:
                                 for i in listaRespostas:
                                     if perguntaConvertida.index(x) == listaRespostas.index(i):
+                                        verificacao = 1
                                         b = listaRespostas.index(i)
                                         b1 = perguntaConvertida.index(x)
                                         if b1 == 0:
@@ -164,6 +179,9 @@ Perguntas de ordem começam com "Me" (Exemplo: "Me conte uma piada?")
                                                 self.oldmensagem["text"] = "Pergunta: " + a
                                                 break
                                 break 
+                        if verificacao == 0:
+                            self.oldmensagem["text"] = "A pergunta não pode ser respondida!! Favor verificar a ortografia ou a estrutura da pergunta."
+                            self.mensagem["text"] = "Se ainda não funcionou, a pergunta pode não estar no nosso banco de dados."
 
 root = Tk()
 Application(root)
