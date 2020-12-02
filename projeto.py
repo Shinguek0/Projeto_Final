@@ -111,7 +111,7 @@ Perguntas de ordem começam com "Me" (Exemplo: "Me conte uma piada?")
     def pergunta(self):
         global check
         listaPerguntas=["Eu deveria comer fora hoje?","Qual meu horoscopo de hoje?","Eu deveria trocar de roupa?","Qual genero de musica deveria ouvir?","Eu deveria ir jogar VideoGame?",
-        "Quando vai acabar as aulas do curso tecnico?","Será que vai chover hoje?","Eu deveria assistir um filme?","Quando é o dia dos finados?",
+        "Quando vai acabar as aulas do curso tecnico?","Será que vai chover hoje?","Eu deveria assistir Bakemonogatari?","Quando é o dia dos finados?",
         "Quantos livros tem a bíblia?","Quanto está o dólar hoje?","Quando foi proclamada a independencia do Brasil?",
         "Quantos paises existem no mundo?","Será que a terra é plana?",
         "Qual o tempo para cozinhar um ovo?", "Quais são as cores do arco íris?","Me conta uma piada?","Me recomenda uma musica?","Quem é o presidente do Brasil?"]
