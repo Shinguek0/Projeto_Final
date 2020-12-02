@@ -10,4 +10,4 @@
 
 <a href="https://github.com/Shinguek0/Projeto_Final/blob/main/Instruções.txt">Instruções</a>
 
-<img src="http://prntscr.com/vufln7"style="max-width:100%;">
+<img src="http://prntscr.com/vufln7" alt="" data-canonical-src= "https://www1.satc.edu.br/portais/acesso/public/assets/img/logoSatc.png" style="max-width:100%;">
