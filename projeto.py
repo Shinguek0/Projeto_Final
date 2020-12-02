@@ -2,6 +2,7 @@ from tkinter import *
 check = 0
 bhop = 0
 class Application:
+    #funçao para criar a interfaçe, ela cria os containers e as labels da interfaçe
     def __init__(self, master=None):
         #define fonte e containers
         self.fontePadrao = ("Arial", "10")
@@ -21,7 +22,7 @@ class Application:
         self.quartoContainer["pady"] = 20
         self.quartoContainer.pack()
 
-        #Text log para botar a mensagem
+        #entry para botar a pergunta
         self.a = Entry(self.quartoContainer)
         self.a["width"] = 40
         self.a["font"] = self.fontePadrao
@@ -32,7 +33,7 @@ class Application:
         self.autenticar["text"] = "enviar"
         self.autenticar["font"] = ("Calibri", "8")
         self.autenticar["width"] = 12
-        self.autenticar["command"] = self.pergunta
+        self.autenticar["command"] = self.pergunta #chama a funçao pergunta ao clicar no botão
         self.autenticar.pack(side=RIGHT)
 
         #label onde fica a resposta
@@ -50,6 +51,7 @@ Perguntas de ordem começam com "Me" (Exemplo: "Me conte uma piada?")
 """, font=self.fontePadrao)
         self.oldmensagem.pack(side=RIGHT)     
 
+    #função para a resposta do horoscopo
     def signo(self):
         a = self.a.get()
         global verificacao
@@ -120,7 +122,8 @@ Perguntas de ordem começam com "Me" (Exemplo: "Me conte uma piada?")
                 self.mensagem["text"] =  ""
             else:
                 bhop = 0
-            
+
+    #funçao que é chamada quando o botão é presionado, ela faz a conversão das perguntas, e da as respostas       
     def pergunta(self):
         global check
         listaPerguntas=["Eu deveria comer fora hoje?","Qual meu horoscopo de hoje?","Eu deveria trocar de roupa?","Qual genero de musica deveria ouvir?","Eu deveria ir jogar VideoGame?",
